@@ -1,11 +1,35 @@
-import React, { Component } from "react";
-import Demo from "./Demo";
+import React, { Component, Text } from "react";
+import Demo from "./screens/Demo";
+import Signup from "./screens/Signup";
+import { Container } from "react-bootstrap";
+import { AuthProvider } from "./contexts/AuthContext";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Dashboard from "./screens/Dashboard";
+import Login from "./screens/Login";
+import PrivateRoute from "./screens/PrivateRoute";
+import ForgotPassword from "./screens/ForgotPassword";
+import UpdateProfile from "./screens/UpdateProfile";
 
 function App() {
   return (
-    <div className="App">
-      <Demo />
-    </div>
+    <Container
+      className="d-flex align-items-center justify-content-center"
+      style={{ minHeight: "100vh" }}
+    >
+      <div className="w-100" style={{ maxWidth: "400px" }}>
+        <Router>
+          <AuthProvider>
+            <Switch>
+              <PrivateRoute exact path="/" component={Dashboard} />
+              <PrivateRoute path="/update-profile" component={UpdateProfile} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/login" component={Login} />
+              <Route path="/forgot-password" component={ForgotPassword} />
+            </Switch>
+          </AuthProvider>
+        </Router>
+      </div>
+    </Container>
   );
 }
 
