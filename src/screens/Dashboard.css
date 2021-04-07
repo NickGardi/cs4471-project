@@ -1,0 +1,21 @@
+.Dashboard{
+    position: relative;
+  }
+  
+/*  h1{
+    background-color: lightgrey;
+  }
+*/  
+  #stock{
+    max-width: 50%;
+    padding-left: 50px;
+  }
+  
+  #index{
+    padding-left: 50px;
+    margin-right: 50px;
+  }
+
+  #currency{
+    padding-left: 50px;
+  }

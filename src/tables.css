@@ -21,3 +21,11 @@ th {
   padding-right: 8px;
   padding-left: 8px;
 }
+
+button{
+  border-radius: 8px;
+}
+
+button:hover{
+  background-color:lightsteelblue;
+}

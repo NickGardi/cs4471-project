@@ -64,6 +64,7 @@ class Indices extends Component {
           </thead>
           <tbody>{this.renderTableBody()}</tbody>
         </table>
+        <br></br>
         <button onClick={this.subscriptionHandler.bind(this)}>
           unsubscribe
         </button>
