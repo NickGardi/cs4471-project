@@ -1,35 +1,18 @@
-import React, { Component, Text } from "react";
-import Demo from "./screens/Demo";
-import Signup from "./screens/Signup";
-import { Container } from "react-bootstrap";
-import { AuthProvider } from "./contexts/AuthContext";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Dashboard from "./screens/Dashboard";
-import Login from "./screens/Login";
-import PrivateRoute from "./screens/PrivateRoute";
-import ForgotPassword from "./screens/ForgotPassword";
-import UpdateProfile from "./screens/UpdateProfile";
+import "./App.css";
+import Stocks from "./stocks";
+import Indices from "./indices";
+import Currencies from "./currencies";
 
 function App() {
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
-        <Router>
-          <AuthProvider>
-            <Switch>
-              <PrivateRoute exact path="/" component={Dashboard} />
-              <PrivateRoute path="/update-profile" component={UpdateProfile} />
-              <Route path="/signup" component={Signup} />
-              <Route path="/login" component={Login} />
-              <Route path="/forgot-password" component={ForgotPassword} />
-            </Switch>
-          </AuthProvider>
-        </Router>
-      </div>
-    </Container>
+    <div className="App">
+      <h1>Stock Tracker</h1>
+      <Stocks />
+      <h1>Index Tracker</h1>
+      <Indices />
+      <h1>Currency Tracker</h1>
+      <Currencies />
+    </div>
   );
 }
 
