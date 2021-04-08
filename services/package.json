@@ -1,0 +1,24 @@
+{
+  "name": "cs4471-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "currencytracker.js",
+  "dependencies": {
+    "firebase-admin": "^9.6.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickGardi/cs4471-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickGardi/cs4471-project/issues"
+  },
+  "homepage": "https://github.com/NickGardi/cs4471-project#readme"
+}
